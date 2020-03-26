@@ -126,7 +126,16 @@ There are two interfaces (see animations below): through widgets and through a H
 
 <img alt="Notebook Widgets" src="http://pandas-profiling.github.io/pandas-profiling/docs/assets/widgets.gif" width="800" />
 
-This is achieved by simply displaying the report. In the Jupyter Notebook, run:
+This is achieved by simply displaying the report. First make sure widgets are enabled. If using standard Jupyter Notebook, execute the following bash command:
+```bash 
+jupyter nbextension enable --py widgetsnbextension
+```
+Or if using JupyterLab, install `jupyterlab-manager` from the JupyterLab extension manager or using this bash command:
+```bash
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
+```
+
+Then in your Jupyter notebook run:
 ```python
 profile.to_widgets()
 ```
